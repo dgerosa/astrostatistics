@@ -3,7 +3,15 @@
 <head>
     <script type="text/javascript">
         var year = 2025; // Change this to update the year
-        var targetURL = "https://github.com/dgerosa/astrostatistics_bicocca_" + year;
+        var basePath = "github.com/dgerosa/astrostatistics_bicocca_" + year;
+
+        // Get the current path after the GitHub Pages domain
+        var currentPath = window.location.pathname;
+
+        // Construct the new URL
+        var targetURL = "https://" + basePath + currentPath;
+
+        // Redirect to the new URL
         window.location.href = targetURL;
     </script>
 </head>
@@ -14,3 +22,4 @@
     </script>
 </body>
 </html>
+

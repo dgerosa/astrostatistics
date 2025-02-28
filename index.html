@@ -5,17 +5,14 @@
         var year = 2025; // Change this to update the year
         var repoBase = "https://github.com/dgerosa/astrostatistics_bicocca_" + year;
 
-        // Get the current path after the GitHub Pages domain
-        var currentPath = window.location.pathname;
+        // Get full current URL
+        var currentURL = window.location.href;
 
-        // Remove the repository name from the path (GitHub Pages includes it)
-        var repoName = "/astrostatistics_bicocca";
-        if (currentPath.startsWith(repoName)) {
-            currentPath = currentPath.substring(repoName.length);
-        }
-
-        // Construct the final GitHub URL
-        var targetURL = repoBase + currentPath;
+        // Replace GitHub Pages URL with GitHub repository URL
+        var targetURL = currentURL.replace(
+            "https://dgerosa.github.io/astrostatistics_bicocca", 
+            repoBase
+        );
 
         // Redirect
         window.location.replace(targetURL);
@@ -28,4 +25,5 @@
     </script>
 </body>
 </html>
+
 

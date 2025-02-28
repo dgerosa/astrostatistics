@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        var year = 2025; // Change this to update the year
+        var repoName = "astrostatistics_bicocca"; // Change this to update the repository name
+        var repoBase = "https://github.com/dgerosa/" + repoName + "_" + year;
+
+        // Redirect to the repository homepage
+        window.location.replace(repoBase);
+    </script>
+</head>
+<body>
+    <p>Redirecting to the repository homepage... If not, <a id="redirectLink" href="#">click here</a>.</p>
+    <script>
+        document.getElementById("redirectLink").href = repoBase;
+    </script>
+</body>
+</html>
+

@@ -3,15 +3,16 @@
 <head>
     <script type="text/javascript">
         var year = 2025; // Change this to update the year
-        var repoBase = "https://github.com/dgerosa/astrostatistics_bicocca_" + year;
+        var repoName = "astrostatistics_bicocca"; // Change this to update the repository name
+        var repoBase = "https://github.com/dgerosa/" + repoName + "_" + year;
 
         // Get the current path after the GitHub Pages domain
         var currentPath = window.location.pathname;
 
-        // Remove the "/astrostatistics_bicocca" prefix
-        var repoName = "/astrostatistics_bicocca";
-        if (currentPath.startsWith(repoName)) {
-            currentPath = currentPath.substring(repoName.length);
+        // Remove the repository prefix "/repoName" (e.g., "/astrostatistics_bicocca")
+        var repoPrefix = "/" + repoName;
+        if (currentPath.startsWith(repoPrefix)) {
+            currentPath = currentPath.substring(repoPrefix.length);
         }
 
         // Construct the final GitHub URL

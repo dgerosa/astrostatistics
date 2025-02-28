@@ -5,21 +5,18 @@
         var year = 2025; // Change this to update the year
         var repoBase = "https://github.com/dgerosa/astrostatistics_bicocca_" + year;
 
-        // Get full current URL
-        var currentURL = window.location.href;
+        // Get the full URL path after GitHub Pages domain
+        var currentPath = window.location.pathname;
 
-        // Replace GitHub Pages URL with GitHub repository URL
-        var targetURL = currentURL.replace(
-            "https://dgerosa.github.io/astrostatistics_bicocca", 
-            repoBase
-        );
+        // Construct the correct GitHub repository URL
+        var targetURL = repoBase + currentPath;
 
         // Redirect
         window.location.replace(targetURL);
     </script>
 </head>
 <body>
-    <p>If you are not redirected, <a id="redirectLink" href="#">click here</a>.</p>
+    <p>Redirecting... If not, <a id="redirectLink" href="#">click here</a>.</p>
     <script>
         document.getElementById("redirectLink").href = targetURL;
     </script>

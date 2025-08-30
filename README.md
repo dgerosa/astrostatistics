@@ -1,4 +1,4 @@
-# astrostatistics_bicocca
+# astrostatistics
 
 This is a parent repo to handle redirects to the current year's repo. 
 
